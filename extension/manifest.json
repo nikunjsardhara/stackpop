@@ -1,0 +1,23 @@
+{
+  "name": "Stackpop",
+  "action": {},
+  "manifest_version": 3,
+  "version": "1.0.1",
+  "description": "Check the stackoverflow question has verified answer.",
+  "permissions": ["activeTab", "scripting"],
+  "web_accessible_resources": [
+    {
+      "resources": ["check.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "512": "check.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
